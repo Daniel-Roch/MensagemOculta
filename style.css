@@ -1,0 +1,40 @@
+*{
+    font-family: Courier, monospace;
+    text-shadow: 2px 2px 3px #969393
+}
+body{
+    margin: 0%;
+    background: url(./img/2c47b2c26bae2a7f13a9884efd78463f.gif);
+    background-size: cover;
+}
+/* Quadrado inicial*/
+.tela{
+    margin: 10% 30% 30% 30%;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 30px;
+    background: url(./img/numbers2.gif);
+    background-size: cover;
+}
+.tela .mensagens-tela .mensagens-tela{
+    color:white;
+    text-align: center;
+}
+/* Botões*/
+.botoes{
+    display: flex;
+    justify-content: space-around;
+}
+.botoes button{
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 10px 40px 10px 40px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+/*Caixa de mensagem*/
+#mensagem-traduzir{
+    border-radius: 10px;
+    height: 150px;
+    width: 400px;
+}
