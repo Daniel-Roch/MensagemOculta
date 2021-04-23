@@ -1,11 +1,11 @@
 *{
     font-family: Courier, monospace;
-    text-shadow: 2px 2px 3px #969393
+    text-shadow: 2px 2px 3px #969393;
 }
 body{
     margin: 0%;
     background: url(./img/2c47b2c26bae2a7f13a9884efd78463f.gif);
-    background-size: cover;
+    background-size:cover;
 }
 /* Quadrado inicial*/
 .tela{
@@ -37,4 +37,27 @@ body{
     border-radius: 10px;
     height: 150px;
     width: 400px;
+}
+
+#mensagem-resultado{
+    border-radius: 10px;
+    height: 150px;
+    width: 400px;
+}
+#resultado-da-traducao{
+    border-radius: 10px;
+    height: 150px;
+    width: 400px;
+}
+/*Parte da tradução*/
+.botoes-traduzir button{
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 10px 40px 10px 40px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+#resultado-da-traducao{
+    margin-bottom: 10px;
 }
