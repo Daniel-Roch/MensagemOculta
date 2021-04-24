@@ -27,14 +27,21 @@ body{
 }
 /* Botões*/
 .botoes{
+    color:white;
+}
+.botoes .selecao-Cript{
+    display: flex;
+    justify-content: space-around;
+}
+.selecao-Cript{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin: 0 60px 0 60px;
-    color: white;
 }
 .formulario button{
     margin-top: 10px;
+}
+.cesar-button{ /*Botão cesar-button*/
+    margin: auto;
 }
 .invisivel-cesar{ /*Parte de deixar o botão cesar invisivel e toda sua estrutura*/
     display: none;
