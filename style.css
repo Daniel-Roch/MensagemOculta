@@ -6,6 +6,12 @@ body{
     background: url(./img/2c47b2c26bae2a7f13a9884efd78463f.gif) center no-repeat fixed;
     background-size:cover;
 }
+.quadro{
+    display: flex;
+}
+.explicao{
+    display: none;
+}
 /* Quadrado inicial*/
 .tela{
     margin: 10% 30% 30% 30%;
@@ -22,14 +28,22 @@ body{
 /* Botões*/
 .botoes{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    margin: 0 60px 0 60px;
+    color: white;
+}
+.invisivel-cesar{
+    display: none;
+}
+.invisivel-base64{
+    display: none;
 }
 .botoes button{
     border-radius: 30px;
     font-size: 15px;
     padding: 10px 40px 10px 40px;
     margin-bottom: 10px;
-    text-decoration: none;
 }
 /*Caixa de mensagem*/
 #mensagem-traduzir{
@@ -54,7 +68,6 @@ body{
     font-size: 15px;
     padding: 10px 40px 10px 40px;
     margin-bottom: 10px;
-    text-decoration: none;
 }
 
 #resultado-da-traducao{

@@ -1,17 +1,45 @@
 var mensagemCrip = document.querySelector('#mensagem-traduzir');
 var mensagemResultado = document.querySelector('#mensagem-resultado')
 var resultadoDaTraducao = document.querySelector('#resultado-da-traducao')
+var cesarIcon = document.querySelector('#cesar-icon')
+var base64Icon = document.querySelector('#base64-icon')
 
-var botaoCesar = document.querySelector('[data-cesar]')
-var botaoBase64 = document.querySelector('[data-base64]')
+var botaoCesar = document.querySelector('.cesar-button')
+var botaoBase64 = document.querySelector('.base64-button')
 
+//icones para aparecer botoes de criptografar cesar e base64
+cesarIcon.addEventListener('click', function(){
+    botaoCesar.classList.remove('invisivel-cesar')
+    botaoBase64.classList.add('invisivel-base64')
+
+})
+base64Icon.addEventListener('click',function(){
+    botaoBase64.classList.remove('invisivel-base64')
+    botaoCesar.classList.add('invisivel-cesar')
+})
 
 //Botoes para criptografar
 botaoCesar.addEventListener('click', (eventCesar) =>{
     eventCesar.preventDefault();
     var textoCripCesar = mensagemCrip.value
- 
+    var textoArrCesar = textoCripCesar.split('')
+    //transformei em array só que com tudo separado [d,a,n,i,e,l]
+    mensagemResultado.innerText = transformaCesa(textoArrCesar)
 })
+//função para percorrer cada letra da palavra e somar + 7 com charCodeAt() e retorna com fromCharCode()
+function transformaCesa(textoArrCesar){
+    var palavraCesar = ``
+    for(var i = 0; i<textoArrCesar.length ; i++){
+        var recebe = textoArrCesar[i].charCodeAt(0) // para poder pegar cada palavra da array, o 0 é a posição
+        recebe += 7
+        var devolve = String.fromCharCode(recebe) //devolve como string
+        palavraCesar = palavraCesar + devolve;
+    }
+    return palavraCesar
+}
+
+
+//Botão de criptografar para Base64
 
 botaoBase64.addEventListener('click', (eventBase64)=>{
     eventBase64.preventDefault();
@@ -21,7 +49,7 @@ botaoBase64.addEventListener('click', (eventBase64)=>{
 
 })
 
-//Botao traduzir
+//Botao traduzir base64
 
 var botaoTraduzirBase64 = document.querySelector('[data-base64-traducao]')
 botaoTraduzirBase64.addEventListener('click', (eventTraduzirBase)=>{
@@ -30,3 +58,5 @@ botaoTraduzirBase64.addEventListener('click', (eventTraduzirBase)=>{
     var textoTraduzidoBase64 = atob(traduzirBase64);
     resultadoDaTraducao.innerText = textoTraduzidoBase64
 })
+
+//botao traduzir Cifra de cesar

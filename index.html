@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,47 @@
     <title>Mensagem Escondida</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <section class="quadro">
     <div class="tela">
-    <h1  class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela">Traduzir</label></h1>
-    <hr>
-    <h2 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela">Bem-vindo(a) espião, gostaria de traduzir sua mensagem?</label></h2>
-       
+        <h1 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela">Traduzir</label></h1>
+        <hr>
+        <h2 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela">Bem-vindo(a) espião, gostaria
+                de traduzir sua mensagem?</label></h2>
+
         <form class="formulario">
             <textarea id="mensagem-traduzir" name="story" placeholder="Escreva seu texto aqui, e traduza clicando nos botôes..."></textarea>
-                <div class="botoes">
-                <button id="cesar" data-cesar>César</button>
-                <button id="base64" data-base64>Base64</button>
-                </div>
+                    <div class="botoes">
+                    <input type="radio" id="cesar-icon" name="cripto" value="cesar">Cifra de César
+                    <input type="radio" id="base64-icon" name="cripto" value="base64">Base64
+                    <button class="cesar-button invisivel-cesar">Criptografar Cesar</button>
+                    <button class="base64-button invisivel-base64">Criptografar Base64</button>
+                    </div>
         </form>
-<!--Resultado quando criptografou-->
-    <hr>
-    <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Resultado</label></h2>
-    
-    <form class="formulario-resultado">
-        <textarea id="mensagem-resultado" name="resultado"></textarea>
-        <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Quer traduzir?</label></h2>
+        <!--Resultado quando criptografou-->
+        <hr>
+        <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Resultado</label></h2>
+
+        <form class="formulario-resultado">
+            <textarea id="mensagem-resultado" name="resultado"></textarea>
+            <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Quer decodificar?</label>
+            </h2>
             <div class="botoes-traduzir">
-            <button id="cesar-traducao" data-cesar-traducao>César</button>
-            <button id="base64-traducao" data-base64-traducao>Base64</button>
+                <button id="cesar-traducao" data-cesar-traducao>Cifra de César</button>
+                <button id="base64-traducao" data-base64-traducao>Base64</button>
             </div>
-    </form>
-<!--Resultado quando se traduziu a criptografia-->
-    <hr>
-    <h2 class="mensagens-tela"><label for="resultado-da-traducao" class="mensagens-tela">Resultado da tradução</label></h2>
-    <textarea id="resultado-da-traducao" name="resultado"></textarea>
+        </form>
+        <!--Resultado quando se traduziu a criptografia-->
+        <hr>
+        <h2 class="mensagens-tela"><label for="resultado-da-traducao" class="mensagens-tela">Resultado da
+                tradução</label></h2>
+        <textarea id="resultado-da-traducao" name="resultado"></textarea>
     </div>
+    <section class="tela explicao"></section>
+</section>
 
     <script src="index.js"></script>
 </body>
+
 </html>
