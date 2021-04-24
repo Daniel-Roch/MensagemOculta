@@ -21,9 +21,12 @@ body{
     background: url(./img/numbers2.gif);
     background-size: cover;
 }
-.tela .mensagens-tela .mensagens-tela{
+.tela .mensagens-tela{
     color:white;
     text-align: center;
+}
+.mensagens-tela-titulo{
+    font-size: 30px;
 }
 /* Botões*/
 .botoes{
@@ -50,7 +53,7 @@ body{
     display: flex;
     justify-content: center;
 }
-#input-cesar{
+#input-cesar{ /* Parte de adicionar um número na caixa do cesar*/
     margin-left: 10px;
     width: 25px;
     text-align: center;
@@ -94,3 +97,22 @@ body{
 #resultado-da-traducao{
     margin-bottom: 10px;
 }
+.invisivel-dec{
+    display: none;
+}
+.invisivel-dec-base64{
+    display: none;
+}
+.cesar-traducao{
+    margin: auto;
+}
+.selecao-Cript{
+    margin-top: 10px;
+}
+.input-cesar-deci{ /* Parte de colocar o numero para a tradução - Cesar*/
+    margin-left: 10px;
+    width: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
