@@ -2,20 +2,29 @@ var mensagemCrip = document.querySelector('#mensagem-traduzir');
 var mensagemResultado = document.querySelector('#mensagem-resultado')
 var resultadoDaTraducao = document.querySelector('#resultado-da-traducao')
 var cesarIcon = document.querySelector('#cesar-icon')
+
 var base64Icon = document.querySelector('#base64-icon')
+var p = document.querySelector('.explic')
+var numeroCesar = document.getElementById('input-cesar')
 
 var botaoCesar = document.querySelector('.cesar-button')
+
+
 var botaoBase64 = document.querySelector('.base64-button')
 
 //icones para aparecer botoes de criptografar cesar e base64
 cesarIcon.addEventListener('click', function(){
     botaoCesar.classList.remove('invisivel-cesar')
+    p.classList.remove('invisivel-cesar')
+    numeroCesar.classList.remove('invisivel-cesar')
     botaoBase64.classList.add('invisivel-base64')
 
 })
 base64Icon.addEventListener('click',function(){
     botaoBase64.classList.remove('invisivel-base64')
     botaoCesar.classList.add('invisivel-cesar')
+    p.classList.add('invisivel-cesar')
+    numeroCesar.classList.add('invisivel-cesar')
 })
 
 //Botoes para criptografar
@@ -23,15 +32,16 @@ botaoCesar.addEventListener('click', (eventCesar) =>{
     eventCesar.preventDefault();
     var textoCripCesar = mensagemCrip.value
     var textoArrCesar = textoCripCesar.split('')
+    numeroCesarRecebido = parseInt(numeroCesar.value)
     //transformei em array só que com tudo separado [d,a,n,i,e,l]
-    mensagemResultado.innerText = transformaCesa(textoArrCesar)
+    mensagemResultado.innerText = transformaCesa(textoArrCesar, numeroCesarRecebido)
 })
 //função para percorrer cada letra da palavra e somar + 7 com charCodeAt() e retorna com fromCharCode()
-function transformaCesa(textoArrCesar){
+function transformaCesa(textoArrCesar, numeroCesarRecebido){
     var palavraCesar = ``
     for(var i = 0; i<textoArrCesar.length ; i++){
         var recebe = textoArrCesar[i].charCodeAt(0) // para poder pegar cada palavra da array, o 0 é a posição
-        recebe += 7
+        recebe += numeroCesarRecebido
         var devolve = String.fromCharCode(recebe) //devolve como string
         palavraCesar = palavraCesar + devolve;
     }
