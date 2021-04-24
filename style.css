@@ -3,8 +3,7 @@
     text-shadow: 2px 2px 3px #969393;
 }
 body{
-    margin: 0%;
-    background: url(./img/2c47b2c26bae2a7f13a9884efd78463f.gif);
+    background: url(./img/2c47b2c26bae2a7f13a9884efd78463f.gif) center no-repeat fixed;
     background-size:cover;
 }
 /* Quadrado inicial*/
