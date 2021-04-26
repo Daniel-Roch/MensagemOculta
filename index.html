@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mensagem Escondida</title>
+    <title>Mensagens Criptografada</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="imagem/png" href="./img/iconcrip.png" />
 </head>
 
 <body>
     <section class="quadro">
     <section class="tela">
-        <h1 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela mensagens-tela-titulo">Mensagens escondidas</label></h1>
+        <h1 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela mensagens-tela-titulo">Mensagens Criptografada!</label></h1>
         <hr>
         <h2 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela">Bem-vindo(a) espião, gostaria de criptografar sua mensagem?</label></h2>
 
@@ -32,11 +33,14 @@
                     </section>
         </form>
         <!--Resultado quando criptografou-->
+        <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Resultado da criptografia</label></h2>
+        <textarea id="mensagem-resultado" name="resultado" placeholder="Sua mensagem criptografada..."></textarea>
         <hr>
-        <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Resultado</label></h2>
-        <textarea id="mensagem-resultado" name="resultado"></textarea>
-        <hr>
+        <!--Parte para decodificar-->
         <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Quer decodificar?</label></h2>
+
+        <textarea id="mensagem-para-decodificar" placeholder="Sua mensagem para criptografar..."></textarea>
+
         <section class="botoes">
             <input type="radio" id="cesar-icon-desc" name="cripto-dec" value="cesar-dec">Cifra de César
             <input type="radio" id="base64-icon-desc" name="cripto-dec" value="base64-dec">Base64
@@ -55,14 +59,15 @@
             </section>
         </form>
         <!--Resultado quando se traduziu a criptografia-->
-        <hr>
         <h2 class="mensagens-tela"><label for="resultado-da-traducao" class="mensagens-tela">Resultado da tradução</label></h2>
-        <textarea id="resultado-da-traducao" name="resultado"></textarea>
+        <textarea id="resultado-da-traducao" placeholder="Mensagem decodificada..."></textarea>
     </section>
 
-    <section class="tela explicao">
-        
-    </section>
+    <!--<section class="tela2 explicao">
+            <section class="mensagem-base64">
+                <h2 class="mensagens-tela-base64">Sua mensagem Base64: </h2>
+            </section>
+        </section>-->
 </section>
 
     <script src="index.js"></script>

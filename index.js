@@ -3,6 +3,7 @@ var mensagemResultado = document.querySelector('#mensagem-resultado')
 var numeroCesar = document.getElementById('input-cesar')
 
 
+
 //icones para aparecer botoes de criptografar cesar e base64
 var cesarIcon = document.querySelector('#cesar-icon')
 var base64Icon = document.querySelector('#base64-icon')
@@ -28,12 +29,11 @@ base64Icon.addEventListener('click',function(){
 //Botoes para criptografar
 botaoCesar.addEventListener('click', (eventCesar) =>{
     eventCesar.preventDefault();
-    mensagemResultado.innerHTML =" "
     var textoCripCesar = mensagemCrip.value
     var textoArrCesar = textoCripCesar.split('')
     var numeroCesarRecebido = parseInt(numeroCesar.value)
     //transformei em array só que com tudo separado [d,a,n,i,e,l]
-    mensagemResultado.textContent = transformaCesa(textoArrCesar, numeroCesarRecebido)
+    mensagemResultado.innerText = transformaCesa(textoArrCesar, numeroCesarRecebido)
 })
         //função para percorrer cada letra da palavra e somar + 7 com charCodeAt() e retorna com fromCharCode()
 function transformaCesa(textoArrCesar, numeroCesarRecebido){
@@ -49,14 +49,21 @@ function transformaCesa(textoArrCesar, numeroCesarRecebido){
 
 
 //Botão de criptografar para Base64
+var telaResposta = document.querySelector('.tela2')
+var mensagemBase64 = document.querySelector('.mensagem-base64')
+var mensagemBase64H2 = document.createElement('h2')
 
 botaoBase64.addEventListener('click', (eventBase64)=>{
     eventBase64.preventDefault();
-    mensagemResultado.innerText =""
     var textoCripBase64 = mensagemCrip.value;
     var textoCripBase64Tran = btoa(textoCripBase64);
-    mensagemResultado.textContent = textoCripBase64Tran 
+    mensagemResultado.innerText = textoCripBase64Tran;
 
+    // Esta parte é para criar uma parte ao lado mostrando a mensagem.
+    //telaResposta.classList.remove('explicao')
+    //mensagemBase64.appendChild(mensagemBase64H2)
+    //mensagemBase64H2.classList.add('mensagens-tela-base64')
+    //mensagemBase64H2.innerHTML = `${textoCripBase64Tran}`
 })
 //--------------------------------------------------------------------------------
 //Botão de aparecer o traduzir
@@ -81,12 +88,13 @@ base64IconDesc.addEventListener('click',function(){
 
 //--------------------------------------------------------------------------------
 var resultadoDaTraducao = document.querySelector('#resultado-da-traducao')
-//Botao traduzir base64
+var mensagemParaDecodificar = document.querySelector('#mensagem-para-decodificar')
 
+//Botao traduzir base64
 var botaoTraduzirBase64 = document.querySelector('.base64-traducao')
 botaoTraduzirBase64.addEventListener('click', ()=>{
     resultadoDaTraducao.innerText =" "
-    var traduzirBase64 = mensagemResultado.value;
+    var traduzirBase64 = mensagemParaDecodificar.value;
     var textoTraduzidoBase64 = atob(traduzirBase64);
     resultadoDaTraducao.innerText = textoTraduzidoBase64
 })
@@ -98,7 +106,7 @@ var numeroCesarDec = document.querySelector('.input-cesar-deci')
 
 cesarTraducao.addEventListener('click', function(){
     resultadoDaTraducao.innerText =" "
-    var traduzirCesar = mensagemResultado.value
+    var traduzirCesar = mensagemParaDecodificar.value
     var traduzirArrCesar = traduzirCesar.split('')
     var valueNumeroCesarDec = numeroCesarDec.value
     var numeroCesarDecRecebido = parseInt(valueNumeroCesarDec)

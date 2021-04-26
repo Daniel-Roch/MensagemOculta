@@ -8,23 +8,45 @@ body{
 }
 .quadro{
     display: flex;
+    justify-content: center;
 }
 .explicao{
     display: none;
 }
 /* Quadrado inicial*/
 .tela{
-    margin: 10% 30% 30% 30%;
+    margin: 10% 5% 30% 5%;
+    width: 500px;
     text-align: center;
     border: 3px solid white;
     border-radius: 30px;
     background: url(./img/numbers2.gif);
     background-size: cover;
 }
-.tela .mensagens-tela{
+/* Parte de aparecer outra janela ao lado*/
+/*.tela2{
+    justify-content: column;
+    margin: 10% 5% 0 5%;
+
+    max-height: 300px;
+    min-width: 100px;
+    max-width: 350px;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 30px;
+    background: url(./img/numbers2.gif);
+    background-size: cover;
+}*/
+.mensagens-tela-base64{
+    color:white;
+    word-wrap: break-word; /* ele estava saindo da tela, coloquei isso para arrumar*/
+}
+/*---------------------------------------------*/
+.mensagens-tela{
     color:white;
     text-align: center;
 }
+
 .mensagens-tela-titulo{
     font-size: 30px;
 }
@@ -75,15 +97,19 @@ body{
     height: 150px;
     width: 400px;
 }
-
 #mensagem-resultado{
+    border-radius: 10px;
+    height: 50px;
+    width: 400px;
+}
+#mensagem-para-decodificar{
     border-radius: 10px;
     height: 150px;
     width: 400px;
 }
 #resultado-da-traducao{
     border-radius: 10px;
-    height: 150px;
+    height: 50px;
     width: 400px;
 }
 /*Parte da tradução*/
