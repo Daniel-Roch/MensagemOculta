@@ -15,13 +15,23 @@
     <section class="tela">
         <h1 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela mensagens-tela-titulo">Mensagens Criptografada!</label></h1>
         <hr>
-        <h2 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela">Bem-vindo(a) espião, gostaria de criptografar sua mensagem?</label></h2>
+        <h2 class="mensagens-tela"><label for="mensagem-traduzir" class="mensagens-tela">Bem-vindo(a) espião, Gostaria de codificar sua mensagem ou decodificar?</label></h2>
+        <!--Botão se quer codificar ou decodificar-->  
 
+            <section class="botao-codificar-decodificar">
+                <div><input type="radio" id="aparecer-janela-codificar" name="cripto" value="botao-selec">Codificar</div>
+                <div><input type="radio" id="aparecer-janela-decodificar" name="cripto" value="botao-selec">Decodificar</div>
+            </section>
+    
+        <!--Parte da pergunta e aparecer os botões para criptografar-->
+    <section id="aparecer-codificar" class="aparecer-codificar aparecer-invisivel">
+    <h1 class="mensagens-tela"> Codificar </h1>
         <form class="formulario">
             <textarea id="mensagem-traduzir" name="story" placeholder="Escreva seu texto aqui, e traduza clicando nos botôes..."></textarea>
                     <section class="botoes">
                     <input type="radio" id="cesar-icon" name="cripto" value="cesar">Cifra de César
                     <input type="radio" id="base64-icon" name="cripto" value="base64">Base64
+                    <!--Botões que aparecem-->
                         <section class="selecao-Cript">
                             <button class="cesar-button invisivel-cesar">Cifra de César</button>
                                 <section class="colocarCesar">
@@ -35,33 +45,35 @@
         <!--Resultado quando criptografou-->
         <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Resultado da criptografia</label></h2>
         <textarea id="mensagem-resultado" name="resultado" placeholder="Sua mensagem criptografada..."></textarea>
-        <hr>
-        <!--Parte para decodificar-->
-        <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Quer decodificar?</label></h2>
-
-        <textarea id="mensagem-para-decodificar" placeholder="Sua mensagem para criptografar..."></textarea>
-
-        <section class="botoes">
-            <input type="radio" id="cesar-icon-desc" name="cripto-dec" value="cesar-dec">Cifra de César
-            <input type="radio" id="base64-icon-desc" name="cripto-dec" value="base64-dec">Base64
-                <section class="selecao-Cript">
-                    <button class="cesar-traducao invisivel-dec">Cifra de César</button>
-                        <section class="colocarCesar">
-                        <label for="input-cesar" id="explicacao-revers" class="explic-revers invisivel-dec"> Quantos Numeros: </label>
-                        <input type="text" id="input-cesar-dec" class="input-cesar-deci invisivel-dec" name="number-cesar-dec"> <!--input-cesar invisivel-cesar-->
-                        </section>
-                </section>
-            <button class="base64-traducao invisivel-dec-base64">Base64</button>
-            </section>
-
-            <section class="botoes-traduzir">
-                <!--Parte para explicação de cada criptografia-->
-            </section>
-        </form>
-        <!--Resultado quando se traduziu a criptografia-->
-        <h2 class="mensagens-tela"><label for="resultado-da-traducao" class="mensagens-tela">Resultado da tradução</label></h2>
-        <textarea id="resultado-da-traducao" placeholder="Mensagem decodificada..."></textarea>
     </section>
+        
+        <!--Parte para decodificar-->
+        <section id="aparecer-decodificar" class="aparecer-decodificar aparecer-invisivel">
+            <h2 class="mensagens-tela"><label for="mensagem-resultado" class="mensagens-tela">Decodificar</label></h2>
+            <textarea id="mensagem-para-decodificar" placeholder="Sua mensagem para criptografar..."></textarea>
+
+            <section class="botoes">
+                <input type="radio" id="cesar-icon-desc" name="cripto-dec" value="cesar-dec">Cifra de César
+                <input type="radio" id="base64-icon-desc" name="cripto-dec" value="base64-dec">Base64
+                    <section class="selecao-Cript">
+                        <button class="cesar-traducao invisivel-dec">Cifra de César</button>
+                            <section class="colocarCesar">
+                                <label for="input-cesar" id="explicacao-revers" class="explic-revers invisivel-dec"> Quantos Numeros: </label>
+                                <input type="text" id="input-cesar-dec" class="input-cesar-deci invisivel-dec" name="number-cesar-dec"> <!--input-cesar invisivel-cesar-->
+                            </section>
+                    </section>
+                <button class="base64-traducao invisivel-dec-base64">Base64</button>
+            </section>
+
+                    <section class="botoes-traduzir">
+                        <!--Parte para explicação de cada criptografia-->
+                    </section>
+                </form>
+                <!--Resultado quando se traduziu a criptografia-->
+                <h2 class="mensagens-tela"><label for="resultado-da-traducao" class="mensagens-tela">Resultado da tradução</label></h2>
+                <textarea id="resultado-da-traducao" placeholder="Mensagem decodificada..."></textarea>
+            </section>
+        </section>
 
     <!--<section class="tela2 explicao">
             <section class="mensagem-base64">

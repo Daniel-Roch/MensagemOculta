@@ -13,6 +13,30 @@ body{
 .explicao{
     display: none;
 }
+/*Botão para codificar e decodificar, além de aparecer a tela*/
+.botao-codificar-decodificar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color:white;
+    font-size: 30px;
+}
+.botao-codificar-decodificar div{
+    border: 1px solid white;
+    border-radius: 50px;
+    padding:8px;
+    margin-left: 20px;
+}
+
+.aparecer-invisivel{
+    display: none;
+}
+#aparecer-codificar h1{
+    font-size: 30px;
+}
+#aparecer-decodificar h2{
+    font-size: 30px;
+}
 /* Quadrado inicial*/
 .tela{
     margin: 10% 5% 30% 5%;

@@ -4,6 +4,24 @@ var numeroCesar = document.getElementById('input-cesar')
 
 
 
+
+
+//botão para aparecer codificar ou decodificar
+var aparecerJanelaCodificar = document.querySelector('#aparecer-janela-codificar')
+var aparecerJanelaDecodificar = document.querySelector('#aparecer-janela-decodificar')
+var aparecerCodificar = document.querySelector('.aparecer-codificar')
+var aparecerDecodificar = document.querySelector('.aparecer-decodificar')
+
+aparecerJanelaCodificar.addEventListener('click',function(){
+    aparecerCodificar.classList.remove('aparecer-invisivel')
+    aparecerDecodificar.classList.add('aparecer-invisivel')
+})
+aparecerJanelaDecodificar.addEventListener('click',function(){
+    aparecerDecodificar.classList.remove('aparecer-invisivel')
+    aparecerCodificar.classList.add('aparecer-invisivel')
+})
+
+
 //icones para aparecer botoes de criptografar cesar e base64
 var cesarIcon = document.querySelector('#cesar-icon')
 var base64Icon = document.querySelector('#base64-icon')
