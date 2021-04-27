@@ -29,17 +29,20 @@
         <form class="formulario">
             <textarea id="mensagem-traduzir" name="story" placeholder="Escreva seu texto aqui, e traduza clicando nos botôes..."></textarea>
                     <section class="botoes">
-                    <input type="radio" id="cesar-icon" name="cripto" value="cesar">Cifra de César
-                    <input type="radio" id="base64-icon" name="cripto" value="base64">Base64
-                    <!--Botões que aparecem-->
+                        <select class="escolha-codificar"> <!-- Seleção de qual irá codificar-->
+                            <option value="n">Escolha...</option>
+                            <option id="cesar-icon" name="cripto" value="1">Cifra de César</option>
+                            <option id="base64-icon" name="cripto" value="2">Base64</option>
+                        </select>
+                        <!--Botões que aparecem-->
                         <section class="selecao-Cript">
-                            <button class="cesar-button invisivel-cesar">Cifra de César</button>
                                 <section class="colocarCesar">
-                                <label for="input-cesar" class="explic invisivel-cesar">Quantos Numeros: </label>
+                                <label for="input-cesar" class="explic invisivel-cesar">Quantos casas a frente: </label>
                                 <input type="text" id="input-cesar" class="inputNumber invisivel-cesar" name="number-cesar"> <!--input-cesar invisivel-cesar-->
                                 </section>
+                            <button class="cesar-button invisivel-cesar">Cifra de César</button>
                         </section>
-                    <button class="base64-button invisivel-base64">Base64</button>
+                        <button class="base64-button invisivel-base64">Base64</button>
                     </section>
         </form>
         <!--Resultado quando criptografou-->
@@ -53,14 +56,17 @@
             <textarea id="mensagem-para-decodificar" placeholder="Sua mensagem para criptografar..."></textarea>
 
             <section class="botoes">
-                <input type="radio" id="cesar-icon-desc" name="cripto-dec" value="cesar-dec">Cifra de César
-                <input type="radio" id="base64-icon-desc" name="cripto-dec" value="base64-dec">Base64
+                <select class="escolha-decodificar">
+                    <option value="n">Escolha...</option>
+                    <option id="cesar-icon-desc" name="cripto-dec" value="1">Cifra de César</option>
+                    <option id="base64-icon-desc" name="cripto-dec" value="2">Base64</option>
+                </select>
                     <section class="selecao-Cript">
-                        <button class="cesar-traducao invisivel-dec">Cifra de César</button>
                             <section class="colocarCesar">
-                                <label for="input-cesar" id="explicacao-revers" class="explic-revers invisivel-dec"> Quantos Numeros: </label>
+                                <label for="input-cesar" id="explicacao-revers" class="explic-revers invisivel-dec"> Quantos casas atrás: </label>
                                 <input type="text" id="input-cesar-dec" class="input-cesar-deci invisivel-dec" name="number-cesar-dec"> <!--input-cesar invisivel-cesar-->
                             </section>
+                        <button class="cesar-traducao invisivel-dec">Cifra de César</button>
                     </section>
                 <button class="base64-traducao invisivel-dec-base64">Base64</button>
             </section>

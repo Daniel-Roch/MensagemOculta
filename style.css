@@ -74,6 +74,15 @@ body{
 .mensagens-tela-titulo{
     font-size: 30px;
 }
+/*Botão para selecionar na parte de codificar */
+.escolha-codificar{
+    height: 40px;
+    border-radius: 30px;
+}
+.escolha-decodificar{
+    height: 40px;
+    border-radius: 30px;
+}
 /* Botões*/
 .botoes{
     color:white;
@@ -98,6 +107,7 @@ body{
 .colocarCesar{ /*Parte de colocar numero*/
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 #input-cesar{ /* Parte de adicionar um número na caixa do cesar*/
     margin-left: 10px;
@@ -155,6 +165,9 @@ body{
 }
 .cesar-traducao{
     margin: auto;
+}
+.colocarCesar{
+    margin-bottom: 10px;
 }
 .selecao-Cript{
     margin-top: 10px;

@@ -3,9 +3,6 @@ var mensagemResultado = document.querySelector('#mensagem-resultado')
 var numeroCesar = document.getElementById('input-cesar')
 
 
-
-
-
 //botão para aparecer codificar ou decodificar
 var aparecerJanelaCodificar = document.querySelector('#aparecer-janela-codificar')
 var aparecerJanelaDecodificar = document.querySelector('#aparecer-janela-decodificar')
@@ -23,24 +20,29 @@ aparecerJanelaDecodificar.addEventListener('click',function(){
 
 
 //icones para aparecer botoes de criptografar cesar e base64
-var cesarIcon = document.querySelector('#cesar-icon')
-var base64Icon = document.querySelector('#base64-icon')
 var botaoCesar = document.querySelector('.cesar-button')
 var botaoBase64 = document.querySelector('.base64-button')
 var p = document.querySelector('.explic')
 
-cesarIcon.addEventListener('click', function(){
-    botaoCesar.classList.remove('invisivel-cesar')
-    p.classList.remove('invisivel-cesar')
-    numeroCesar.classList.remove('invisivel-cesar')
-    botaoBase64.classList.add('invisivel-base64')
-
-})
-base64Icon.addEventListener('click',function(){
-    botaoBase64.classList.remove('invisivel-base64')
-    botaoCesar.classList.add('invisivel-cesar')
-    p.classList.add('invisivel-cesar')
-    numeroCesar.classList.add('invisivel-cesar')
+var escolhaCodificar = document.querySelector('.escolha-codificar')
+escolhaCodificar.addEventListener('change', function(event){
+    var retur = event.target.value
+    if(retur == 1){
+        botaoCesar.classList.remove('invisivel-cesar')
+        p.classList.remove('invisivel-cesar')
+        numeroCesar.classList.remove('invisivel-cesar')
+        botaoBase64.classList.add('invisivel-base64')
+    }else if(retur == 2){
+        botaoBase64.classList.remove('invisivel-base64')
+        botaoCesar.classList.add('invisivel-cesar')
+        p.classList.add('invisivel-cesar')
+        numeroCesar.classList.add('invisivel-cesar')
+    }else if(retur == 'n'){
+        botaoBase64.classList.add('invisivel-base64')
+        botaoCesar.classList.add('invisivel-cesar')
+        p.classList.add('invisivel-cesar')
+        numeroCesar.classList.add('invisivel-cesar')
+    }
 })
 //----------------------------------------------------------------
 
@@ -85,23 +87,28 @@ botaoBase64.addEventListener('click', (eventBase64)=>{
 })
 //--------------------------------------------------------------------------------
 //Botão de aparecer o traduzir
-var cesarIconDesc = document.querySelector('#cesar-icon-desc')
-var base64IconDesc = document.querySelector('#base64-icon-desc')
 var explicacaoRevers = document.querySelector('#explicacao-revers')
 var inputCesarDec = document.getElementById('input-cesar-dec')
 
-cesarIconDesc.addEventListener('click', function(){
-    cesarTraducao.classList.remove('invisivel-dec')
-    explicacaoRevers.classList.remove('invisivel-dec')
-    inputCesarDec.classList.remove('invisivel-dec')
-    botaoTraduzirBase64.classList.add('invisivel-dec-base64')
-
-})
-base64IconDesc.addEventListener('click',function(){
-    botaoTraduzirBase64.classList.remove('invisivel-dec-base64')
-    cesarTraducao.classList.add('invisivel-dec')
-    explicacaoRevers.classList.add('invisivel-dec')
-    inputCesarDec.classList.add('invisivel-dec')
+var escolhaDecodificar = document.querySelector('.escolha-decodificar')
+escolhaDecodificar.addEventListener('change',function(event){
+    var returDecod = event.target.value
+    if(returDecod == 1){
+        cesarTraducao.classList.remove('invisivel-dec')
+        explicacaoRevers.classList.remove('invisivel-dec')
+        inputCesarDec.classList.remove('invisivel-dec')
+        botaoTraduzirBase64.classList.add('invisivel-dec-base64')
+    }else if(returDecod == 2){
+        botaoTraduzirBase64.classList.remove('invisivel-dec-base64')
+        cesarTraducao.classList.add('invisivel-dec')
+        explicacaoRevers.classList.add('invisivel-dec')
+        inputCesarDec.classList.add('invisivel-dec')
+    }else if(returDecod == 'n'){
+        botaoTraduzirBase64.classList.add('invisivel-dec-base64')
+        cesarTraducao.classList.add('invisivel-dec')
+        explicacaoRevers.classList.add('invisivel-dec')
+        inputCesarDec.classList.add('invisivel-dec')
+    }
 })
 
 //--------------------------------------------------------------------------------
